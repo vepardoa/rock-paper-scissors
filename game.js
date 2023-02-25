@@ -42,8 +42,14 @@ function playRound(playerSelection, computerSelection) {
     return message;
 }
 
-const playerSelection = "paper";
-const computerSelection = getComputerChoice();
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt("Enter your move: ");
+        const computerSelection = getComputerChoice();
+        console.log(computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
+    }
+}
+game();
 
